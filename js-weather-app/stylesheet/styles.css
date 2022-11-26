@@ -1,0 +1,151 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Poppins', sans-serif;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --clr-primary: #111322;
+  --clr-primary-light: #141728;
+  --clr-primary-dark: #070918;
+
+  --clr-secondary: #f4ca8a;
+  --clr-secondary-light: #f8dfb9;
+  --clr-secondary-dark: #f0b65e;
+
+  --clr-accent: #f78727;
+  --clr-accent-2: #ea0606;
+
+  --clr-neutral-white: #fff;
+  --clr-neutral-gray: #a3a3a3;
+  --clr-neutral-black: #141414;
+
+  --fs-base: 1.6rem;
+  --fw-light: 100;
+  --fw-md: 500;
+  --fw-bold: 700;
+
+  --spacer: 1rem;
+}
+
+body {
+  background: radial-gradient(49.3% 31.74% at 50% 0%, #1f233e 0%, #070918 100%);
+  color: var(--clr-neutral-white);
+}
+
+.container {
+  width: min(90%, 120rem);
+  margin: 0 auto;
+}
+
+.weather--container {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.weather--card {
+  width: min(100%, 22rem);
+  background: #a3a3a3;
+  background-blend-mode: soft-light;
+  backdrop-filter: blur(8rem);
+  border-radius: 1rem;
+  /* transform: matrix(0, 1, 1, 0, 0, 0); */
+  position: relative;
+  padding: 0.5rem;
+}
+
+.flex--group {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  gap: va(--spacer);
+}
+
+.grid--group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
+}
+/* .weather--card::after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 45px;
+  aspect-ratio: 1/1;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(240, 182, 94, 0.75) 127.5%,
+    rgba(255, 126, 0, 0.75) 227.5%
+  );
+  box-shadow: 0px 0px 5px #f0b65e, 0px 0px 25px rgba(240, 182, 94, 0.75),
+    0px 0px 50px rgba(255, 168, 0, 0.5), 0px 0px 100px rgba(240, 164, 48, 0.25);
+} */
