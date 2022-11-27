@@ -152,13 +152,14 @@ body {
 } */
 
 .weather--card {
-  width: min(100%, 22rem);
+  width: min(100%, 32rem);
   background: hsla(0, 0%, 64%, 0.3);
   /* background-blend-mode: soft-light; */
   backdrop-filter: blur(8rem);
   border-radius: 1rem;
   position: relative;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem 1.5rem 1rem;
+  outline: 1px solid var(--clr-accent);
 }
 
 .weather__title {
@@ -173,7 +174,9 @@ body {
 }
 
 .weather__icon {
-  width: min(100%, 10rem);
+  width: min(100%, 9.6rem);
+  display: block;
+  margin: 0 auto;
 }
 
 .weather__description {
@@ -189,7 +192,6 @@ body {
 }
 .flex--group {
   display: flex;
-  justify-content: space-around;
   align-items: center;
   gap: var(--spacer);
 }
@@ -197,5 +199,5 @@ body {
 .grid--group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0.5rem;
+  grid-gap: var(--spacer);
 }

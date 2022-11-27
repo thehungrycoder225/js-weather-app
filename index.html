@@ -31,9 +31,9 @@
               class="input__search"
               placeholder="Location"
             />
-            <i class="fa fa-search" aria-hidden="true"></i>
+            <i class="btn-search fa fa-search" aria-hidden="true"></i>
           </div>
-          <div class="weather--card flex--group">
+          <div class="weather--card grid--group">
             <div class="weather--main">
               <h5 class="weather__title"> Today's Weather </h5>
               <img
@@ -41,14 +41,21 @@
                 alt="Weather Icon"
                 class="weather__icon"
               />
-              <p class="weather__description">It's Sunny</p>
+              <p class="weather__description">Weather Description</p>
               <p class="weather__temp"
-                ><span class="temp--now">30</span>
+                ><span class="temp--now">Temp</span>
                 °c
               </p>
             </div>
             <div class="weather--forecast">
-              <p class="weather__location">-----</p>
+              <p class="weather__location flex--group"
+                ><img
+                  src="images/location.svg"
+                  style="display: inline; width: 1.4rem"
+                  alt=""
+                />
+                Location</p
+              >
               <p class="forecast--title">Forecast</p>
               <div class="forecast--container flex--group">
                 <div>
