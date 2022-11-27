@@ -108,18 +108,24 @@ body {
 
 .title {
   flex-basis: 100%;
+  font-size: 1.5rem;
 }
 
 .input__search {
   width: min(50%, 50rem);
-  background: hsla(0, 0%, 64%, 0.281);
+  background: hsla(0, 0%, 100%, 0.1);
   background-blend-mode: soft-light;
   border: 0.5px solid rgba(217, 217, 217, 0.5);
   backdrop-filter: blur(8rem);
   /* Note: backdrop-filter has minimal browser support */
-  padding: 0.1rem 2rem;
+  padding: 0.1rem 1rem;
   border-radius: 1.5rem;
   display: inline-block;
+  border: 1px solid transparent;
+  outline: 1px solid hsla(0, 0%, 85%, 0.5);
+  color: inherit;
+  font-size: 0.7rem;
+  text-align: center;
 }
 
 .weather--container {
@@ -127,30 +133,7 @@ body {
   display: grid;
   place-content: center;
 }
-
-.weather--card {
-  width: min(100%, 22rem);
-  background: hsla(0, 0%, 64%, 0.3);
-  /* background-blend-mode: soft-light; */
-  backdrop-filter: blur(8rem);
-  border-radius: 1rem;
-  position: relative;
-  padding: 0.5rem;
-}
-
-.flex--group {
-  display: flex;
-  justify-content: space-around;
-  align-items: baseline;
-  gap: var(--spacer);
-}
-
-.grid--group {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0.5rem;
-}
-.weather--card::after {
+/* .weather--card::after {
   aspect-ratio: 1/1;
   z-index: -1;
   content: '';
@@ -166,4 +149,53 @@ body {
   );
   box-shadow: 0px 0px 5px #f0b65e, 0px 0px 25px rgba(240, 182, 94, 0.75),
     0px 0px 50px rgba(255, 168, 0, 0.5), 0px 0px 100px rgba(240, 164, 48, 0.25);
+} */
+
+.weather--card {
+  width: min(100%, 22rem);
+  background: hsla(0, 0%, 64%, 0.3);
+  /* background-blend-mode: soft-light; */
+  backdrop-filter: blur(8rem);
+  border-radius: 1rem;
+  position: relative;
+  padding: 0.5rem;
+}
+
+.weather__title {
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.weather--main {
+  text-align: center;
+}
+
+.weather__icon {
+  width: min(100%, 10rem);
+}
+
+.weather__description {
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+}
+.weather__temp {
+  font-size: 3.2rem;
+}
+.temp--now {
+  font-weight: var(--fw-bold);
+  color: var(--clr-secondary-dark);
+}
+.flex--group {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: var(--spacer);
+}
+
+.grid--group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
 }
